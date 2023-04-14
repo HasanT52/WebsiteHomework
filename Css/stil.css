@@ -1,0 +1,210 @@
+*{
+    text-decoration: none;
+}
+
+html::-webkit-scrollbar{
+    width: 8px;
+    background-color: brown;
+}
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 30px;
+    background-color: whitesmoke;
+}
+
+body{
+    background: url(../Resimler/arkafoto.jpg) no-repeat;
+}
+
+.ana_sayfa{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+span{
+    color: brown;
+}
+
+.ust_kisim{
+    align-items: center;
+    background-color: brown;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ust_kisim .ust_sol img{
+    margin-left: 100px;
+    height: 100px;
+}
+
+.ust_kisim .ust_sag{
+    margin-right: 100px;
+    
+}
+
+.ust_kisim .ust_sag a{
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.ust_kisim .ust_orta a{
+    padding-left: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.hava_durumu{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.hava_durumu h2{
+    text-align: left;
+}
+
+.hava_durumu img{
+    border-radius: 20px;
+    height: 750px; 
+}
+
+.kutu{
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.kutu p{
+    padding-left: 10px;
+}
+
+.gundem .kutu img,
+.spor_sayfasi .kutu img,
+.teknoloji_sayfasi img{
+    width: 300px;
+}
+
+.ana_sayfa h1{
+    text-align: center;
+}
+
+.gundem a,
+.spor_sayfasi a
+.teknoloji_sayfasi .kutu a{
+    color: brown;
+}
+
+.ana_sayfa .teknoloji_sayfasi .kutu p a{
+    color: brown;
+}
+
+.kayit_ekran{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: brown;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.kayit_ekran h1{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.kayit_ekran input{
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+}
+
+.txt{
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.girisyapbtn{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    color: brown;
+    cursor: pointer;
+}
+
+.kayit_ekran a{
+    color: whitesmoke;
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+
+.alt_kisim{
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    background-color: brown;
+    color: whitesmoke;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alt_kisim .alt_sol{
+    padding-left: 100px;
+    
+}
+
+.alt_kisim .alt_sag{
+    padding-right: 100px;
+}
+
+.alt_kisim li{
+    list-style-type: none;
+}
+
+.alt_kisim li a{
+    color: whitesmoke;
+}
+
+.enalt_kisim{
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    background-color: brown;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.ana_sayfa .hakkinda{
+    font-size: 25px;
+}
+
+.ana_sayfa .hakkinda a,
+.ana_sayfa .kaynak a{
+    color: brown;
+}
+
+.ana_sayfa .tablo_kutu{
+    text-align: center;
+    padding-left: 583px;
+    padding-right: 583px;
+}
+
+

@@ -1,0 +1,150 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * .9);
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  .xox_sayfa{
+    background-color: whitesmoke;
+  }
+  
+  .oyunalan {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto)
+  }
+  
+  .hucre {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hucre:first-child,
+  .hucre:nth-child(2),
+  .hucre:nth-child(3) {
+    border-top: none;
+  }
+  
+  .hucre:nth-child(3n + 1) {
+    border-left: none;
+  }
+  
+  .hucre:nth-child(3n + 3) {
+    border-right: none;
+  }
+  
+  .hucre:last-child,
+  .hucre:nth-child(8),
+  .hucre:nth-child(7) {
+    border-bottom: none;
+  }
+  
+  .hucre.x,
+  .hucre.o {
+    cursor: not-allowed;
+  }
+  
+  .hucre.x::before,
+  .hucre.x::after,
+  .hucre.o::before {
+    background-color: black;
+  }
+  
+  .oyunalan.x .hucre:not(.x):not(.o):hover::before,
+  .oyunalan.x .hucre:not(.x):not(.o):hover::after,
+  .oyunalan.o .hucre:not(.x):not(.o):hover::before {
+    background-color: lightgrey;
+  }
+  
+  .hucre.x::before,
+  .hucre.x::after,
+  .oyunalan.x .hucre:not(.x):not(.o):hover::before,
+  .oyunalan.x .hucre:not(.x):not(.o):hover::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * .15);
+    height: var(--mark-size);
+  }
+  
+  .hucre.x::before,
+  .oyunalan.x .hucre:not(.x):not(.o):hover::before {
+    transform: rotate(45deg);
+  }
+  
+  .hucre.x::after,
+  .oyunalan.x .hucre:not(.x):not(.o):hover::after {
+    transform: rotate(-45deg);
+  }
+  
+  .hucre.o::before,
+  .hucre.o::after,
+  .oyunalan.o .hucre:not(.x):not(.o):hover::before,
+  .oyunalan.o .hucre:not(.x):not(.o):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .hucre.o::before,
+  .oyunalan.o .hucre:not(.x):not(.o):hover::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+  }
+  
+  .hucre.o::after,
+  .oyunalan.o .hucre:not(.x):not(.o):hover::after {
+    width: calc(var(--mark-size) * .7);
+    height: calc(var(--mark-size) * .7);
+    background-color: white;
+  }
+  
+  .kazanan_msg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+  }
+  
+  .kazanan_msg button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+  }
+  
+  .kazanan_msg button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+  
+  .kazanan_msg.show {
+    display: flex;
+  }
